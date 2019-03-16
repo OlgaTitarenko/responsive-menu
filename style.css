@@ -1,0 +1,125 @@
+body {
+    font: 16px/1.2 Source Sans Pro, sans-serif;
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
+    background: #fff4f0;
+}
+a:hover {
+    color:orange;
+}
+a{
+    color:grey;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-top: 55px;
+    overflow-x: hidden;
+}
+
+.menu-list{
+    text-align: right;
+    background-color: white;
+    padding-right: 30px;
+}
+
+.menu-list li {
+    display: inline-flex;
+    padding: 10px;
+    font-weight: bold;
+}
+label {
+    display: none;
+}
+input {
+    display: none;
+}
+
+ul li:first-child a {
+    text-decoration:none;
+}
+@media screen and (min-width: 300px) and (max-width: 499px) {
+    .container {
+        font-size: 0.9em;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 399px) {
+    .container {
+        font-size: 0.7em;
+    }
+}
+@media screen and (min-width: 150px) and (max-width: 299px) {
+    .container {
+        font-size: 0.5em;
+        padding: 0;
+    }
+}
+@media screen and (min-width: 100px) and (max-width: 149px) {
+    .container {
+        font-size: 0.5em;
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+@media (min-width:1000px) {
+    .menu-list{
+        padding-right: 12%;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu{
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        margin-top: -20px;
+        box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .3);
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .3);
+        background-color: white ;
+        padding:10px;
+        position: fixed;
+        width: 100%;
+        height: 35px;
+    }
+    label {
+        cursor: pointer;
+        display:inline-flex;
+        position: absolute;
+        z-index: 10;
+        border: 1px solid gray;
+        margin:10px;
+        padding: 5px;
+        background-color: white;
+    }
+    .menu-list{
+        display: none;
+    }
+    .checkbox:checked ~ .container {
+        background-color: rgba(0,0,0,.5);
+        position: fixed;
+        z-index: -1;
+    }
+    .checkbox:checked ~ .menu {
+        display: block;
+        width: 180px;
+        height: 100%;
+        padding-top: 25px;
+        position: fixed;
+        overflow: auto;
+    }
+    .checkbox:checked ~ .menu >.menu-list{
+        display: block;
+        text-align: left;
+        padding-top: 5px;
+        padding-left: 0;
+    }
+}
+/*Work with smile =^_^=*/
